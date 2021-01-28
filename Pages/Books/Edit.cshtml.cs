@@ -36,6 +36,7 @@ namespace Damian.Pages.Books
             {
                 return NotFound();
             }
+            ViewData["PublisherID"] = new SelectList(_context.Set<Publisher>(), "ID", "PublisherName");
             return Page();
         }
 
