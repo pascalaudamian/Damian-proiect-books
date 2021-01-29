@@ -26,7 +26,10 @@
                 @Html.DisplayNameFor(model => model.Book[0].PublishingDate)
             </th>
             <th>
-                @Html.DisplayNameFor(model => model.Book[0].Publisher.PublisherName)
+                @Html.DisplayNameFor(model => model.Book[0].Publisher)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.Book[0].BookCategories)
             </th>
         </tr>
     </thead>
@@ -45,8 +48,11 @@
             <td>
                 @Html.DisplayFor(modelItem => item.PublishingDate)
             </td>
+            <th>
+                @Html.DisplayFor(modelItem => item.Publisher)
+            </th>
             <td>
-                @Html.DisplayFor(modelItem => item.Publisher.PublisherName)
+                @Html.DisplayFor(modelItem => item.BookCategories)
             </td>
             <td>
                 <a asp-page="./Edit" asp-route-id="@item.ID">Edit</a> |
